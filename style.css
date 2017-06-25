@@ -1,0 +1,560 @@
+/*
+Theme Name: Pedamuse
+Theme URI: http://aurthurmusendame.com
+Author: Aurthur Musendame
+Author URI: http://www.aurthurmusendame.com
+Description: Coming Soon!
+Version: 0.6.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: pedamuse
+Tags: one-column, custom-menu, featured-images, theme-options, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+pedamuse is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+
+Resource Licenses:
+Font Awesome: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+Bootstrap: http://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT, documentation under CC BY 3.0.)
+Owl Carousel 2: http://www.owlcarousel.owlgraphic.com/ | https://github.com/smashingboxes/OwlCarousel2/blob/develop/LICENSE (Code licensed under MIT)
+and of course
+jQuery: https://jquery.org | (Code licensed under MIT)
+WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
+*/
+
+/*
+  ****************************************************************
+                                                          SWATCHES
+  ****************************************************************
+
+
+            BLUE                1088C4 
+            WHITE               FFF
+            ORANGE              FC781F
+            GRAY                F4F4F4
+            GRAy                gray
+            BLACK               2E3641
+
+*/
+
+
+/*
+  ****************************************************************
+                                                          GLOBALS
+  ****************************************************************
+*/
+
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    background-color: #ffffff;
+    color: gray;
+}
+
+a.card-link,
+.widget-area a,
+.nav-links a {
+    display: inline-flex;
+    display: -webkit-inline-flex;
+}
+
+/*                                        FONTS +
+  =======================================         */
+
+.text-minibold {
+    font-weight: 600;
+}
+
+.text-bold {
+	font-weight: 500;
+}
+
+.text-semibold {
+    font-weight: 400;
+}
+
+.text-italics {
+	font-style: italic;
+}
+
+.contact-social .fa,
+.header-entry-meta {
+    font-size: 2rem;
+}
+
+/*                                        SPACING +
+  =======================================           */
+
+.about-more .btn,
+.author-entry,
+.site-header .btn-group {
+    margin: 2rem auto;
+}
+
+
+#primary.content-area,
+#right-sidebar.widget-area,
+.recent-entries .card {
+    margin-top: 2rem;
+}
+
+#archive-wrapper header,
+.no-results.not-found header,
+.widget-area .widget,
+.page-info-header,
+.resource,
+article,
+.footer-search,
+#secondary .widget,
+.navigation.post-navigation {
+    margin-bottom: 2rem !important;
+}
+
+
+.about-more {
+    margin: 4rem 0 6rem 0;
+}
+
+.pedamuse-navigation,
+.contact-details {
+    margin: 4rem auto;
+}
+
+/*                                        COLORS +
+  =======================================          */
+
+#main-menu .menu-item.active,
+#main-menu .menu-item:hover,
+#search-toggler:hover {
+    background: #FC781F;
+}
+
+
+.pedamuse-read-more-link.card-link,
+a {
+    color: #1088c4 !important;
+}
+.pedamuse-search-icon ,
+.page-info,
+.navbar-brand,
+a.nav-link {
+    color: #fff !important;
+}
+
+.pedamuse-read-more-link.card-link:hover,
+h4.entry-title.card-title a:hover {
+    border-bottom: 2px solid #fc781f;
+    margin-bottom: -2px;
+    text-decoration: none;
+}
+
+.smallnavbar-top,
+.main-nav,
+.page-info-overlay {
+    background-color: rgba(0,0,0,0.4);
+}
+
+/*
+  ****************************************************************
+                                                       SITE HEADER
+  ****************************************************************
+*/
+.site-header,	
+.smallnavbar-top ul {
+	border-bottom: 1px solid #ccc;	
+	margin-bottom: -1px;
+}
+
+a.navbar-brand img {
+    max-width: 15rem;
+}
+
+.navbar-toggler {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #FFF;
+    background-color: transparent;
+    margin-right: 0;
+    border-radius: 100%
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+    border-radius: 100%;
+    margin-left: -8px;
+}
+
+.header-site-image img {
+    height: 10rem;
+    width: 10rem;
+}
+
+
+@media (min-width: 540px) { 
+    button.navbar-toggler.float-sm-right{
+        margin-top: 10px;
+    }
+}
+
+/*                                        menu search
+  =======================================        */
+
+.pedamuse-search-icon {
+    float: right;
+}
+
+.pedamuse-search-icon-contaner {
+  height: inherit;
+  padding: inherit;
+  font-size: inherit;   
+}
+
+
+.pedamuse-search-contaner {
+    display: none;
+    background: rgba(255,255,255,.1);
+    padding: 15px;
+    width: 100%;
+}
+
+.pedamuse-search-box {
+    width: 35%;
+    float: right !important;
+}
+
+.pedamuse-search-box .input-group-btn {
+    display: none;
+}
+
+
+/*
+  ****************************************************************
+                                                         PAGE INFO
+  ****************************************************************
+*/
+
+.page-info {
+    height: 20rem;
+}
+
+.page-info.front-page-home { /* if info-page be on front-page and home increase size */
+    height: 30rem;
+}
+
+
+.page-info-overlay {
+    display: relative;
+    height: inherit !important;
+    padding-top: 5rem;    
+}
+
+.front-page-home .page-info-overlay { /* if info-page be on index reduce padding */
+    padding-top: 2rem;
+}
+
+
+
+/*
+  ****************************************************************
+                                                          ARTICLES
+  ****************************************************************
+*/
+
+.author-avatar img.rounded-circle {
+    width: 5rem;
+    height: auto;
+    margin-right: 1rem;
+}
+
+.author-meta span.by-line {
+    display: block;
+}
+
+.author-meta span.by-line::before {
+    content: " _____";
+}
+
+.blog-default img.card-img.img-fluid {
+    height: 10rem;
+    width: 10rem;
+}
+
+.blog-default .card {
+    border: none;
+}
+
+article.blog-default  {
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 0.25rem;
+}
+
+article.post img.card-img-top {
+    width: 100%;
+}
+
+/*                                        double
+  =======================================        */
+
+.blog-double img.card-img-top {
+    max-width: 100% !important;
+    max-height: 25rem !important;
+}
+
+.blog-double {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blog-double article {
+ /*   width: 45%;*/
+  margin: 0 auto;
+  flex: 0 0 45%;    
+  flex-direction: column;
+}
+
+/*                                        pins
+  =======================================        */
+article.blog-pins {
+    text-align: justify;
+}
+
+/*                                        pagination
+  =======================================           */
+
+.widget-area a.card-link:before,
+.nav-next a:before,
+.nav-previous a:before {
+    display: inline-block;
+    margin-right: 10px;
+    font-family: 'fontawesome';
+    font-size: 10px;
+    font-size: 1rem;
+    content: "\f124";
+    color: #FC781F;
+}
+
+/*                                        categories + tags
+  =======================================           */
+.categories > a {
+    padding: 0.2rem 0.5rem;
+    background: #FC781F !important;
+    border-radius: 1rem;
+    color: #fff !important;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+.tagged > a {
+    padding: 0.2rem 0.5rem;
+    background: #1088C4 !important;
+    border-radius: 1rem;
+    color: #fff !important;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+/*
+  ****************************************************************
+                                                           widgets
+  ****************************************************************
+*/
+
+
+/*
+  ****************************************************************
+                                                         RESOURCES
+  ****************************************************************
+*/
+
+.resource-price-os {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-left: 0.75rem;
+    background: #ccc;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    box-shadow: -1px 2px 5px;
+}
+
+.resource-logo img {
+    width: 15rem;
+}
+
+.resource-price-os .badge {
+    margin: 0.2em;
+}
+
+
+/*
+  ****************************************************************
+                                                            search
+  ****************************************************************
+*/
+
+span.search-querry {
+    display: block;
+    font-style: italic;
+    color: #FC781F;
+}
+
+span.alert i.fa {
+    color: red !important;
+}
+
+/*
+  ****************************************************************
+                                                    front-page.php
+  ****************************************************************
+*/
+
+/*                                        work-area
+  =======================================           */
+
+.work-area {
+    margin: 4rem auto;
+}
+
+.work-area > h4 {
+    margin-bottom: 4rem;
+}
+
+.site-footer .widget,
+.work-area .card-block {
+    padding: 1rem;
+    border-left: 3px solid #FC781F;
+}
+
+/*                                        Featured Space
+  =======================================                */
+
+.featured-space {
+  /* add bg-img */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 6rem;
+    color: rgba(255,255,255,.9);
+}
+
+.featured-space .feature {
+    padding: 4rem 0;
+}
+
+.featured-space .latest-post {
+    background: rgba(23,76,90,.6);
+}
+
+.featured-space .supernova-tool {
+    background: rgba(201,16,90,.3);
+} 
+
+.featured-space .card {
+    background: transparent;
+    border: none;
+}
+
+.featured-space .feature > h4 {
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgba(255,255,255,.9);
+}
+
+.featured-space .btn {
+    width: 50% !important;
+    margin-left: 25%;
+}
+
+.featured-space .card-title a,
+.featured-space .card-text a,
+.featured-space .card-subtitle {
+  color: #fc781f !important;
+}
+
+/*                                        home featured product 
+  =======================================                      */
+
+.featured-home-product > h4 {
+    margin-bottom: 4rem;
+}
+
+.f-h-p-image {
+    text-align: center;
+}
+
+.f-h-p-image img {
+    height: 300px;
+    max-width: 250px;
+    margin-right: -10rem;
+}
+/*                                        home about
+  =======================================            */
+
+.home-about {
+    background-repeat: no-repeat;
+    background-position: 25rem 0;
+    background-size: cover;
+    margin: 4rem auto;
+}
+
+.home-about .about {
+    background: rgba(0,0,0,.05);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 4rem 2rem;
+    border-left: 3px solid #fc781f !important;
+    margin-left: 2rem;
+
+}
+
+.home-about .about > h4 {
+    font-size: 3rem;
+}
+
+.home-about .about > p.text-muted {
+    font-size: 1.5rem;
+    margin-top: -0.75rem;
+}
+
+/*
+  ****************************************************************
+                                                        main footer
+  ****************************************************************
+*/
+
+.site-footer .smallnavbar-top,
+.copyright,
+.footer-navbar {
+    background: rgba(0,0,0,8);
+}
+
+.site-footer nav.smallnavbar-top {
+    background: rgba(0,0,0,.9);
+}
+
+.copyright, .footer-navbar {
+    font-size: 0.9rem;
+    padding: 0.25rem 0;
+}
+
+#wrapper-footer-full, #wrapper-static-hero {
+     background-color: #FFF !important; 
+}
+
+.site-footer .widget {
+  margin-left: 1rem;
+  margin-right: -1.5rem;
+}
+
+/*
+  ****************************************************************
+                                                          
+  ****************************************************************
+*/ 
+
