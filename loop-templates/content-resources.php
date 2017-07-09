@@ -18,7 +18,7 @@
 
 				<div class="row">
 
-					<div class="col-md-4 text-center">
+					<div class="col-4 text-center">
 
 						<div class="resource-logo">
 
@@ -30,15 +30,17 @@
 
 							<div class="row no-gutter">
 
-								<span class="badge badge-pill badge-default">OS: <?php echo get_post_meta( get_the_ID(), '_resource_os', true ); ?></span>
+								<span class="badge badge-pill badge-default d-sm-block">OS: </span>
+								<span class="badge badge-pill badge-info  on-sm-block"><?php echo get_post_meta( get_the_ID(), '_resource_os', true ); ?></span>
 
-								<span class="badge badge-pill badge-default">price: $<?php  echo get_post_meta( get_the_ID(), '_resource_price', true ); ?></span>
+								<span class="badge badge-pill badge-default d-sm-block">price: </span>
+								<span class="badge badge-pill badge-warning  on-sm-block"><?php  echo get_post_meta( get_the_ID(), '_resource_price', true ); ?></span>
 
 							</div>
 						</div>
 
 					</div>
-					<div class="col-md-8">
+					<div class="col-8">
 
 						<header class="card-header" >
 

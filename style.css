@@ -38,6 +38,10 @@ WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstr
 */
 
 
+
+
+
+
 /*
   ****************************************************************
                                                           GLOBALS
@@ -57,6 +61,13 @@ a.card-link,
     display: inline-flex;
     display: -webkit-inline-flex;
 }
+
+.wrapper-fluid.wrapper-navbar.wrapper-navbar {
+   background-size: cover !important;
+}
+
+
+
 
 /*                                        FONTS +
   =======================================         */
@@ -84,6 +95,11 @@ a.card-link,
 
 /*                                        SPACING +
   =======================================           */
+
+
+.btn-group.header-links {
+  margin-top: 4rem;
+}
 
 .about-more .btn,
 .author-entry,
@@ -144,6 +160,7 @@ a {
     color: #1088c4 !important;
 }
 
+.btn-group.header-links a,
 .home-about,
 .pedamuse-search-icon ,
 .page-info,
@@ -201,11 +218,6 @@ a.navbar-brand img {
 }
 
 
-@media (min-width: 540px) { 
-    button.navbar-toggler.float-sm-right{
-        margin-top: 10px;
-    }
-}
 
 /*                                        menu search
   =======================================        */
@@ -587,6 +599,15 @@ span.alert i.fa {
   margin-right: -1.5rem;
 }
 
+.footer-widget .textwidget {
+  text-align: center;
+}
+
+.footer-widget .textwidget img {
+    max-height: 200px !important;
+}
+
+
 /*
   ****************************************************************
                                      PEDAMUSE CONTACT GOOGLE MAPS
@@ -596,4 +617,77 @@ span.alert i.fa {
 iframe.google-maps {
     margin-bottom: -0.5rem;
     margin-top: 4rem;
+}
+
+
+/*
+  ****************************************************************
+                                                    Media Querries
+  ****************************************************************
+*/ 
+
+
+@media (min-width: 540px) { 
+    button.navbar-toggler.float-sm-right{
+        margin-top: 10px;
+    }
+}
+
+
+ /*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+
+}
+
+ /*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { 
+
+}
+
+ /*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+
+}
+
+ /*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+
+}
+
+/*         OR                    */
+
+ /*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575px) { 
+
+}
+
+ /*Small devices (landscape phones, less than 768px)*/
+@media (max-width: 767px) { 
+    .container {
+        width: 100% !important;
+        margin: auto !important;
+    }
+
+    .d-sm-block {
+      display: block !important;
+    }
+
+    .nav.navbar-nav .menu-item, 
+    .main-menu .menu-item {
+      text-align: center;
+    }
+
+   
+
+
+}
+
+ /*Medium devices (tablets, less than 992px)*/
+@media (max-width: 991px) { 
+
+}
+
+ /*Large devices (desktops, less than 1200px)*/
+@media (max-width: 1199px) { 
+
 }

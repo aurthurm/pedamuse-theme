@@ -20,7 +20,7 @@ get_header();
 
 		<div class="row">
 
-			<div class="col-sm-8 offset-md-2 content-area" id="primary">
+			<div class="col-12 col-sm-10 offset-sm-1 col-md-10 offset-md-1 content-area" id="primary">
 
 				<main class="site-main" id="main" role="main">
 
