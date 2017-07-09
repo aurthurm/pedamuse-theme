@@ -12,6 +12,7 @@
 <article <?php post_class( 'card' ); ?> id="post-<?php the_ID(); ?>">
 
 	<?php echo get_the_post_thumbnail( $post->ID, 'large', array( 'class' => 'card-img-top img-fluid' ) ); ?>
+
 	<div class="card-block">
 
 		<header class="entry-header">
@@ -34,7 +35,7 @@
 		</header><!-- .entry-header -->
 
 		<!-- disclaimer if affiliating -->
-		<?php get_template_part( 'loop-templates/content', 'short-disclaimer' ); ?>
+		<?php // get_template_part( 'loop-templates/content', 'short-disclaimer' ); ?>
 		<!-- / disclaimer if affiliating -->
 
 			
@@ -55,9 +56,17 @@
 
 			<?php // pedamuse_entry_footer(); ?>
 		</footer> .entry-footer -->
-		<span class="categories pull-right text-italics"><?php the_category(' '); ?> 
-			<span class="tagged"><?php the_tags('Tagged: <i class="fa fa-tag"></i> ', ', ', ''); ?></span>
-		</span>
+		<div class="clearfix">			
+			<span class="categories pull-right text-italics"><?php the_category(' '); ?> 
+				<span class="tagged"><?php the_tags('Tagged: <i class="fa fa-tag"></i> ', ', ', ''); ?></span>
+			</span>
+		</div>
 
-	</div>
+		<hr>
+ 
+		<!-- verse  -->
+		<?php get_template_part( 'loop-templates/content', 'verse' ); ?>
+		<!-- / vesre -->
+	</div> 
+
 </article>

@@ -19,7 +19,9 @@ if ( ! function_exists( 'pedamuse_scripts' ) ) {
 
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'pedamuse-scripts', get_template_directory_uri() . '/js/theme.min.js', array(), $the_theme->get( 'Version' ), true );
-		wp_enqueue_script( 'pedamuse-main-scripts', get_template_directory_uri() . '/js/pedamuse.js', array(), $the_theme->get( 'Version' ), true );
+		//wp_enqueue_script( 'pedamuse-matchHeight', get_template_directory_uri() . '/js/jquery.matchHeight-min.js', array(), $the_theme->get( 'Version' ), true );
+		wp_enqueue_script( 'pedamuse-main-scripts', get_template_directory_uri() . '/js/pedamuse.js', array('jquery', 'pedamuse-scripts'), $the_theme->get( 'Version' ), true );
+		
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}

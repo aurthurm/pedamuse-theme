@@ -91,7 +91,7 @@ a.card-link,
     margin: 2rem auto;
 }
 
-
+.btn-group.header-links,
 #primary.content-area,
 #right-sidebar.widget-area,
 .recent-entries .card {
@@ -120,6 +120,11 @@ article,
     margin: 4rem auto;
 }
 
+.site-footer .widget{
+    padding: 1rem;
+}
+
+
 /*                                        COLORS +
   =======================================          */
 
@@ -129,11 +134,17 @@ article,
     background: #FC781F;
 }
 
+.verse span,
+.home-about .about .text-muted {
+    color: #FC781F!important;
+}
 
 .pedamuse-read-more-link.card-link,
 a {
     color: #1088c4 !important;
 }
+
+.home-about,
 .pedamuse-search-icon ,
 .page-info,
 .navbar-brand,
@@ -209,7 +220,6 @@ a.navbar-brand img {
   font-size: inherit;   
 }
 
-
 .pedamuse-search-contaner {
     display: none;
     background: rgba(255,255,255,.1);
@@ -241,7 +251,6 @@ a.navbar-brand img {
     height: 30rem;
 }
 
-
 .page-info-overlay {
     display: relative;
     height: inherit !important;
@@ -251,8 +260,6 @@ a.navbar-brand img {
 .front-page-home .page-info-overlay { /* if info-page be on index reduce padding */
     padding-top: 2rem;
 }
-
-
 
 /*
   ****************************************************************
@@ -293,12 +300,17 @@ article.post img.card-img-top {
     width: 100%;
 }
 
+.verse span {
+  margin-right: 0.25rem;
+}
+
 /*                                        double
   =======================================        */
 
 .blog-double img.card-img-top {
     max-width: 100% !important;
-    max-height: 25rem !important;
+    height: 20rem !important;
+    /*max-height: 25rem !important;*/
 }
 
 .blog-double {
@@ -325,6 +337,9 @@ article.blog-pins {
 /*                                        pagination
   =======================================           */
 
+
+.quotez .card-blockquote  p:before,
+.quotez .card-blockquote  p:after,
 .widget-area a.card-link:before,
 .nav-next a:before,
 .nav-previous a:before {
@@ -359,10 +374,30 @@ article.blog-pins {
 
 /*
   ****************************************************************
-                                                           widgets
+                                                           quotez
   ****************************************************************
 */
 
+.quotez .card-blockquote p {
+    font-style: italic;
+}
+
+.quotez .card-blockquote cite {
+    color: orange;
+}
+
+.quotez .card-blockquote  footer:before {
+    display: block;
+    content: "----- ---- - -- --- ---- --- -- - ---- -----";
+}
+
+.quotez .card-blockquote  p:before {
+    content: "\f10d";
+}
+
+.quotez .card-blockquote  p:after {
+    content: "\f10e";
+}
 
 /*
   ****************************************************************
@@ -423,8 +458,7 @@ span.alert i.fa {
 }
 
 .site-footer .widget,
-.work-area .card-block {
-    padding: 1rem;
+.work-area .col-md-4 {
     border-left: 3px solid #FC781F;
 }
 
@@ -432,7 +466,7 @@ span.alert i.fa {
   =======================================                */
 
 .featured-space {
-  /* add bg-img */
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -496,14 +530,15 @@ span.alert i.fa {
   =======================================            */
 
 .home-about {
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: 25rem 0;
+    background-position: right;
     background-size: cover;
     margin: 4rem auto;
 }
 
 .home-about .about {
-    background: rgba(0,0,0,.05);
+    background: rgba(0,0,0,.5);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -554,7 +589,11 @@ span.alert i.fa {
 
 /*
   ****************************************************************
-                                                          
+                                     PEDAMUSE CONTACT GOOGLE MAPS
   ****************************************************************
 */ 
 
+iframe.google-maps {
+    margin-bottom: -0.5rem;
+    margin-top: 4rem;
+}

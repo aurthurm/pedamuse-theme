@@ -21,10 +21,17 @@ $container = get_theme_mod( 'pedamuse_container_type' );
 	<meta name="apple-mobile-web-app-title" content="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9238077196302083",
+    enable_page_level_ads: true
+  });
+</script>
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('match-height'); ?>>
 
 <div class="hfeed site" id="page">
 
@@ -33,11 +40,11 @@ $container = get_theme_mod( 'pedamuse_container_type' );
 
 		<?php if( ( is_front_page() && get_header_image() ) || ( is_front_page() && is_home() && get_header_image() ) ) : ?>
 
-		<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar" style="background-image: url('<?php header_image(); ?>');">
+		<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar" style="background-image: url('<?php header_image(); ?>'); background-attachment: fixed; background-size: cover !important;">
 
 		<?php elseif ( has_post_thumbnail() && !is_front_page() && !is_home() ) : ?>
 
-		<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar" style="background-image: url('<?php the_post_thumbnail_url(); ?>'); background-repeat: no-repeat; background-size: cover !important; background-position: center center !important;">		    
+		<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar" style="background-image: url('<?php the_post_thumbnail_url(); ?>');  background-attachment: fixed; background-repeat: no-repeat; background-size: cover !important; background-position: center center !important;">		    
 		 
 		 <?php elseif( is_home() && get_option('page_for_posts') ) : ?>
 
@@ -48,7 +55,7 @@ $container = get_theme_mod( 'pedamuse_container_type' );
 		  	$featured_image = $img[0];
 			?>
 
-			<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar" style="background-image: url('<?php echo  $featured_image; ?>'); background-repeat: no-repeat; background-size: cover !important; background-position: center center !important;">		    
+			<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar" style="background-image: url('<?php echo  $featured_image; ?>');  background-attachment: fixed; background-repeat: no-repeat; background-size: cover !important; background-position: center center !important;">		    
 		 
 		<?php else: ?>
 
@@ -156,10 +163,10 @@ $container = get_theme_mod( 'pedamuse_container_type' );
 					</div>
 
 					<div class="btn-group text-center d-flex justify-content-center header-links" role="group">
-						<a class="btn btn-primary btn-lg" href="<?php echo get_theme_mod( 'btn_url_1', true ); ?>">
+						<a class="btn btn-info btn-lg" href="<?php echo get_theme_mod( 'btn_url_1', true ); ?>">
 						<?php echo get_theme_mod( 'pedamuse_btn_1_txt', true ); ?>
 						</a>
-						<a class="btn btn-success btn-lg" href="<?php echo get_theme_mod( 'btn_url_2', true ); ?>">
+						<a class="btn btn-default btn-lg" href="<?php echo get_theme_mod( 'btn_url_2', true ); ?>">
 							<?php echo get_theme_mod( 'pedamuse_btn_2_txt', true ); ?>
 						</a>
 					</div>	

@@ -25,32 +25,35 @@ get_header();
 	<div class="container-fluid">
 		<div class="row">
 
-			<?php 
+			<div class="col-sm-10 offset-sm-1">
+				<div class="row">
+					<?php 
 
-			$service_args = array(
-			    'post_type'=> 'work_service',
-			    );              
+					$service_args = array(
+					    'post_type'=> 'work_service',
+					    );              
 
-			$service_query = new WP_Query( $service_args );
-			if( $service_query->have_posts() ) : 
-				while ( $service_query->have_posts() ) : 
-					$service_query->the_post(); ?>
+					$service_query = new WP_Query( $service_args );
+					if( $service_query->have_posts() ) : 
+						while ( $service_query->have_posts() ) : 
+							$service_query->the_post(); ?>
 
-						<div class="col-md-4">
-							<a href="<?php echo get_post_meta( get_the_ID(), 'service_link', true ); ?>" class="card-link">
-								<div class="card-block">
-									<div class="card-title">
-										<h5><?php echo get_post_meta( get_the_ID(), 'service_name', true ); ?></h5>
-									</div>
-									<div class="card-text">
-										<?php echo get_post_meta( get_the_ID(), 'service_description', true ); ?>
-									</div>
+								<div class="col-md-4">
+									<a href="<?php echo get_post_meta( get_the_ID(), 'service_link', true ); ?>" class="card-link">
+										<div class="card-block">
+											<div class="card-title">
+												<h5><?php echo get_post_meta( get_the_ID(), 'service_name', true ); ?></h5>
+											</div>
+											<div class="card-text">
+												<?php echo get_post_meta( get_the_ID(), 'service_description', true ); ?>
+											</div>
+										</div>
+									</a>
 								</div>
-							</a>
-						</div>
 
-			<?php endwhile; endif; wp_reset_query(); ?>
-
+					<?php endwhile; endif; wp_reset_query(); ?>
+				</div>
+			</div>
 		</div>
 	</div>
 </div> <!-- /Work Area -->

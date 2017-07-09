@@ -41,7 +41,7 @@ $blog_type = get_theme_mod( 'pedamuse_blog_type' );
 
 							<main class="site-main" id="main">
 								<!-- some into or quote before main blog listing -->
-								<?php get_template_part( 'loop-templates/content', 'quote' ); ?>
+								<?php get_template_part( 'loop-templates/content', 'quotez' ); ?>
 								<!-- / some into or quote before main blog listing -->
 								
 
