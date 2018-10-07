@@ -51,7 +51,7 @@ get_header();
 									</a>
 								</div>
 
-					<?php endwhile; endif; wp_reset_query(); ?>
+					<?php endwhile; endif; wp_reset_query(); ?> 
 				</div>
 			</div>
 		</div>
@@ -66,7 +66,7 @@ function echo_spaces_image() {
 		$url = wp_get_attachment_url($id);
 		echo  $url;
 	} else {
-		echo ""; # ou can use a default image
+		echo ""; # o u can use a default image
 	}
 }
 # echo_spaces_image();

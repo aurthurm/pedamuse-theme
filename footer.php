@@ -72,14 +72,14 @@ $container = get_theme_mod( 'pedamuse_container_type' );
 
 		<div class="copyright text-center text-muted text-small">
 			<span>&copy; 2017 Theme
-					<a href="<?php  echo esc_url( __( 'http://www.aurthurmusendame.com/','pedamuse' ) ); ?>">
+					<a href="<?php  echo esc_url( __( 'http://www.facebook.com/aurthur.musendame','pedamuse' ) ); ?>">
 					<?php printf( 
 					esc_html__( '%s', 'pedamuse' ), $the_theme->get( 'Name' ) ); ?>
 					</a>
 			</span>
-			<span> | Policy</span>
-			<span> | Disclaimer</span>
-			<span class="text-uppercase"> | Developed by <a href="//aurthurmusendame.com" title="Aurthur Musendame" class="text-italics">Aurthur Musendame</a></span>
+			<span class="disbaled"> | Policy</span>
+			<span class="disabled"> | Disclaimer</span>
+			<span class="text-uppercase"> | Developed by <a href="//facebook.com/aurthur.musendame" title="Aurthur Musendame" class="text-italics">Aurthur Musendame</a></span>
 		</div>
 
 	</div>
